@@ -5,7 +5,7 @@ const { paths } = require('../main/config')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: path.resolve(paths.sourceDirPath, './main.ts'),
+  entry: path.resolve(paths.sourceDirPath, './index.tsx'),
   output: {
     path: paths.distDirPath,
     filename: '[name].[contenthash].bundle.js',
