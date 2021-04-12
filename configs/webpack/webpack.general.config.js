@@ -24,21 +24,42 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)/i,
-        use: 'ts-loader',
+        test: /\.(js|jsx)$/i,
+        use: 'babel-loader',
+        include: /src/i,
         exclude: /node_modules/i,
       },
       {
-        test: /\.(js|jsx)/i,
-        use: 'babel-loader',
+        test: /\.(ts|tsx)$/i,
+        use: 'ts-loader',
+        include: /src/i,
+        exclude: /node_modules/i,
       },
+
       {
-        test: /\.(sass|scss)/i,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-      },
-      {
-        test: /\.css/i,
+        test: /\.(css)$/i,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
+        include: /src/i,
+        exclude: /node_modules/i,
+      },
+      {
+        test: /\.(sass|scss)$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
+        include: /src/i,
+        exclude: /node_modules/i,
+      },
+
+      {
+        test: /\.(jpe?g|png|gif)$/i,
+        use: ['file-loader'],
+        include: /src/i,
+        exclude: /node_modules/i,
+      },
+      {
+        test: /\.(svg)$/i,
+        use: ['svg-inline-loader'],
+        include: /src/i,
+        exclude: /node_modules/i,
       },
     ],
   },
