@@ -6,6 +6,7 @@ const WebpackBar = require('webpackbar')
 
 const HtmlMinimizerWebpackPlugin = require('html-minimizer-webpack-plugin')
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
+const TerserWebpackPlugin = require('terser-webpack-plugin')
 
 module.exports = {
   mode: 'production',
@@ -25,6 +26,11 @@ module.exports = {
       new HtmlMinimizerWebpackPlugin({
         parallel: true,
         exclude: /node_modules/i,
+      }),
+      new TerserWebpackPlugin({
+        parallel: true,
+        exclude: /node_modules/i,
+        extractComments: false,
       }),
       new CssMinimizerWebpackPlugin({
         parallel: true,

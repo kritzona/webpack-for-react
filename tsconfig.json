@@ -7,6 +7,7 @@
     "jsx": "react",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
+    "removeComments": true,
     "lib": ["DOM", "DOM.Iterable", "ES5", "ES6", "ESNext"]
   },
   "include": ["./src/"]
