@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ES6",
+    "target": "ES5",
+    "jsx": "react",
+    "allowJs": true,
+    "lib": ["DOM", "DOM.Iterable", "ES5", "ES6", "ESNext"]
+  },
+  "include": ["./src/"]
+}

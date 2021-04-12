@@ -18,7 +18,16 @@ module.exports = {
       inject: 'body',
     }),
   ],
+  resolve: {
+    extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
+  },
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.(ts|tsx)/i,
+        use: 'ts-loader',
+        exclude: /node_modules/i,
+      },
+    ],
   },
 }
