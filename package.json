@@ -4,8 +4,8 @@
   "description": "Webpack-конфигурация для React-приложений",
   "main": "index.ts",
   "scripts": {
-    "start": "webpack serve --config webpack.dev.config.js",
-    "build": "webpack serve --config webpack.prod.config.js"
+    "start": "webpack --mode=development",
+    "build": "webpack --mode=production"
   },
   "keywords": [],
   "author": "kritzona",
