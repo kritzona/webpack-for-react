@@ -1,0 +1,20 @@
+{
+  "name": "webpack-for-react",
+  "version": "1.0.0",
+  "description": "Webpack-конфигурация для React-приложений",
+  "main": "index.ts",
+  "scripts": {
+    "start": "webpack serve --config webpack.config.dev.js",
+    "build": "webpack serve --config webpack.config.prod.js"
+  },
+  "keywords": [],
+  "author": "kritzona",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.2.1",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  }
+}
