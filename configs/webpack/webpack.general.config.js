@@ -50,17 +50,25 @@ module.exports = {
       },
 
       {
-        test: /\.(jpe?g|png|gif)$/i,
-        use: ['file-loader'],
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[contenthash].[ext]',
+              outputPath: 'images',
+            },
+          },
+        ],
         include: /src/i,
         exclude: /node_modules/i,
       },
-      {
+      /* {
         test: /\.(svg)$/i,
         use: ['svg-inline-loader'],
         include: /src/i,
         exclude: /node_modules/i,
-      },
+      }, */
     ],
   },
 }
