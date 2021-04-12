@@ -8,7 +8,7 @@ const webpackProdConfig = require('./configs/webpack/webpack.prod.config')
 module.exports = (env) => {
   const isWebpackBuild = !!env.WEBPACK_BUILD
 
-  merge(
+  return merge(
     webpackGeneralConfig,
     isWebpackBuild ? webpackProdConfig : webpackDevConfig,
   )
