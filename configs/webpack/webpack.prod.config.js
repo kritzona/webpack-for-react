@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const WebpackBar = require('webpackbar')
 
+const HtmlMinimizerWebpackPlugin = require('html-minimizer-webpack-plugin')
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin')
 
 module.exports = {
@@ -21,8 +22,14 @@ module.exports = {
   optimization: {
     minimize: true,
     minimizer: [
-      new CssMinimizerWebpackPlugin({
+      new HtmlMinimizerWebpackPlugin({
+        parallel: true,
         exclude: /node_modules/i,
+      }),
+      new CssMinimizerWebpackPlugin({
+        parallel: true,
+        exclude: /node_modules/i,
+        minify: CssMinimizerWebpackPlugin.cssnanoMinify,
       }),
     ],
   },
