@@ -11,6 +11,7 @@
   "author": "kritzona",
   "license": "ISC",
   "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
     "prettier": "^2.2.1",
     "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0",
