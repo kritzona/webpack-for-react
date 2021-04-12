@@ -19,6 +19,10 @@ module.exports = {
     }),
   ],
   resolve: {
+    alias: {
+      '@': paths.sourceDirPath,
+      '@components': path.resolve(paths.sourceDirPath, './components/'),
+    },
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
   },
   module: {
