@@ -5,4 +5,9 @@ import App from './App'
 
 const rootContainer = document.getElementById('root')
 
-ReactDOM.render(<App />, rootContainer)
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  rootContainer,
+)
