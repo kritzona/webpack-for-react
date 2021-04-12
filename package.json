@@ -11,6 +11,9 @@
   "author": "kritzona",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^5.3.1",
     "prettier": "^2.2.1",
     "ts-loader": "^8.1.0",

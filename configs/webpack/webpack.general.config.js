@@ -28,6 +28,10 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/i,
       },
+      {
+        test: /\.(js|jsx)/i,
+        use: 'babel-loader',
+      },
     ],
   },
 }
